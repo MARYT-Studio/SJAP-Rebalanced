@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class BladeMURASAMA {
-	public static final String name = "flammpfeil.slashblade.named.murasamablade";
+	public static final String name = "slashblade.named.murasamablade";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
@@ -40,24 +40,24 @@ public class BladeMURASAMA {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-		 ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
-		ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
-		SlashBlade.addRecipe("FPNCore", new ShapedOreRecipe(new ResourceLocation("flammpfeil.slashblade","FPNCore"), ItemLoader.FPNCore, new Object[]{
+		 ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.ProudSoulStr, 1);
+		ItemStack sphere = SlashBlade.findItemStack("slashblade", SlashBlade.SphereBladeSoulStr, 1);
+		SlashBlade.addRecipe("FPNCore", new ShapedOreRecipe(new ResourceLocation("slashblade","FPNCore"), ItemLoader.FPNCore, new Object[]{
 				"SQS", "QNQ", "SQS", 
 			      Character.valueOf('S'), sphere, 
 			      Character.valueOf('Q'), "blockQuartz", 
 			      Character.valueOf('N'), "netherStar"
 		}));
-	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa"),new Object[]{
+	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade("slashblade.named.muramasa"),new Object[]{
 	    		 " RI", "RBG", "SL ", 
 	    	      Character.valueOf('I'), "ingotIron", 
 	    	      Character.valueOf('R'), "blockRedstone", 
 	    	      Character.valueOf('L'), new ItemStack(Blocks.LEVER), 
-	    	      Character.valueOf('B'), SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa"), 
+	    	      Character.valueOf('B'), SlashBlade.getCustomBlade("slashblade.named.muramasa"), 
 	    	      Character.valueOf('G'), "gunpowder", 
 	    	      Character.valueOf('S'), ItemLoader.FPNCore 
 				}));
-		SlashBlade.addRecipe("murasama_restart", new RecipeRestartUserRF(new ResourceLocation("flammpfeil.slashblade","murasama_restart"), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade(name),new Object[]{
+		SlashBlade.addRecipe("murasama_restart", new RecipeRestartUserRF(new ResourceLocation("slashblade","murasama_restart"), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade(name),new Object[]{
 				"S", "B", "I", 
 			      Character.valueOf('I'), "blockQuartz", 
 			      Character.valueOf('B'), SlashBlade.getCustomBlade(name), 

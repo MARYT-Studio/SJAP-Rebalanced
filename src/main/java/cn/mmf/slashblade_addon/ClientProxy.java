@@ -32,7 +32,7 @@ public class ClientProxy extends CommonProxy {
 		EntityLoader.registerRender();
 		if (ConfigLoader.switch_MURASAMA)
 			ModelLoader.setCustomModelResourceLocation(ItemLoader.FPNCore, 0,
-					new ModelResourceLocation(SlashBlade.modid + ":" + "sphere.obj"));
+					new ModelResourceLocation(SlashBlade.MOD_ID + ":" + "sphere.obj"));
 		Slashblade_model(ItemLoader.rfblade);
 
 		if (Loader.isModLoaded(Thaumcraft.MODID))
@@ -40,7 +40,7 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private static final ModelResourceLocation modelLoc = new ModelResourceLocation(
-			"flammpfeil.slashblade:model/named/blade.obj");
+			"slashblade:model/named/blade.obj");
 	
 	@SideOnly(Side.CLIENT)
 	public static void Slashblade_model(Item item) {

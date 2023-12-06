@@ -16,11 +16,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeNihil {
 	
-	  public static final String namenl = "flammpfeil.slashblade.named.nihil";
-	  public static final String nameex = "flammpfeil.slashblade.named.nihilex";
-	  public static final String nameul = "flammpfeil.slashblade.named.nihilul";
-	  public static final String namebx = "flammpfeil.slashblade.named.nihilbx";
-	  public static final String namecc = "flammpfeil.slashblade.named.crimsoncherry";
+	  public static final String namenl = "slashblade.named.nihil";
+	  public static final String nameex = "slashblade.named.nihilex";
+	  public static final String nameul = "slashblade.named.nihilul";
+	  public static final String namebx = "slashblade.named.nihilbx";
+	  public static final String namecc = "slashblade.named.crimsoncherry";
 	  
 	@SubscribeEvent
 	public void initnl(InitEvent event){
@@ -153,13 +153,13 @@ public class BladeNihil {
 		ItemStack nihilcc = SlashBlade.getCustomBlade(namecc);
 		ItemStack nihilbx = SlashBlade.getCustomBlade(namebx);
 		
-	    ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	    ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
+	    ItemStack sphere = SlashBlade.findItemStack("slashblade", "sphere_bladesoul", 1);
+	    ItemStack ingot = SlashBlade.findItemStack("slashblade", "ingot_bladesoul", 1);
 	    
 		ItemStack reqblade_nl=new ItemStack(SlashBlade.weapon);
 		reqblade_nl.setItemDamage(Short.MAX_VALUE);
 		
-		SlashBlade.addRecipe(namenl, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namenl), nihil, reqblade_nl
+		SlashBlade.addRecipe(namenl, new RecipeAwakeBlade(new ResourceLocation("slashblade",namenl), nihil, reqblade_nl
 				, new Object[]{
 						"SIS","IBI","SIS",'I',ingot,'S',sphere,'B',reqblade_nl
 				}));
@@ -171,20 +171,20 @@ public class BladeNihil {
 	    if (tag_ex.hasKey("ench")) {
 	      tag_ex.removeTag("ench");
 	    }
-		SlashBlade.addRecipe(nameex, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nameex), nihilex, reqblade_ex
+		SlashBlade.addRecipe(nameex, new RecipeAwakeBlade(new ResourceLocation("slashblade",nameex), nihilex, reqblade_ex
 				, new Object[]{
 						"SNS","IBI","SDS", 'S', sphere, 'I', ingot, 'B', reqblade_ex, 'N', Items.NETHER_STAR, 'D', "blockDiamond"
 				}));
 		ItemStack reqblade_ul=SlashBlade.getCustomBlade(nameex);
 	    NBTTagCompound tag_ul = ItemSlashBlade.getItemTagCompound(reqblade_ul);
-	    ItemStack yamato = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.yamato");
+	    ItemStack yamato = SlashBlade.getCustomBlade("slashblade.named.yamato");
 	    ItemSlashBlade.RepairCount.set(tag_ul, Integer.valueOf(3));
 	    ItemSlashBlade.KillCount.set(tag_ul, Integer.valueOf(3000));
 	    ItemSlashBlade.ProudSoul.set(tag_ul, Integer.valueOf(6500));
 	    if (tag_ul.hasKey("ench")) {
 	      tag_ul.removeTag("ench");
 	    }
-	    SlashBlade.addRecipe(nameul,new RecipeNihil( new ResourceLocation("flammpfeil.slashblade",nameul), nihilul, reqblade_ul, 1, 1, yamato, 1, 2, true,
+	    SlashBlade.addRecipe(nameul,new RecipeNihil( new ResourceLocation("slashblade",nameul), nihilul, reqblade_ul, 1, 1, yamato, 1, 2, true,
 				new Object[]{
 						"SNS", "DBD", "SYS", 'S', SlashBlade.weapon, 'Y', yamato, 'B', reqblade_ul, 'N', Items.NETHER_STAR, 'D', "blockDiamond"
 				}));
@@ -196,12 +196,12 @@ public class BladeNihil {
 	    if (tag_cc.hasKey("ench")) {
 	      tag_cc.removeTag("ench");
 	    }
-	    SlashBlade.addRecipe(namecc,new RecipeNihil( new ResourceLocation("flammpfeil.slashblade",namecc), nihilcc, reqblade_cc, 1, 1, nihil, 1, 0, false,
+	    SlashBlade.addRecipe(namecc,new RecipeNihil( new ResourceLocation("slashblade",namecc), nihilcc, reqblade_cc, 1, 1, nihil, 1, 0, false,
 				new Object[]{
 						"DSD", "DMD", "DDD", 'S', nihil, 'M', reqblade_cc, 'D', "blockDiamond"
 				}));
 	    
-	    SlashBlade.addRecipe(namebx,new RecipeNihil( new ResourceLocation("flammpfeil.slashblade",namebx), nihilbx, nihilul, 0, 1, nihilcc, 2, 1, false,
+	    SlashBlade.addRecipe(namebx,new RecipeNihil( new ResourceLocation("slashblade",namebx), nihilbx, nihilul, 0, 1, nihilcc, 2, 1, false,
 				new Object[]{
 						"DDD",
 						"ACB",

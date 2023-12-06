@@ -16,7 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeKirisaya {
-	public static final String name = "flammpfeil.slashblade.named.kirisaya";
+	public static final String name = "slashblade.named.kirisaya";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
@@ -41,7 +41,7 @@ public class BladeKirisaya {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
+	    ItemStack sphere = SlashBlade.findItemStack("slashblade", "sphere_bladesoul", 1);
 	    ItemSlashBlade.SpecialAttackType.set(sphere.getTagCompound(), Integer.valueOf(0));
 	    ItemStack blade = SlashBlade.getCustomBlade(name);
 	    ItemStack reqiredBlade = new ItemStack(SlashBlade.wrapBlade);
@@ -52,7 +52,7 @@ public class BladeKirisaya {
 	    reqiredBlade.addEnchantment(Enchantments.SHARPNESS, 3);
 	    reqiredBlade.addEnchantment(Enchantments.POWER, 3);
 	    
-	    SlashBlade.addRecipe(name, new RecipeKirisaya(new ResourceLocation("flammpfeil.slashblade",name), blade, reqiredBlade, sphere, new Object[]{
+	    SlashBlade.addRecipe(name, new RecipeKirisaya(new ResourceLocation("slashblade",name), blade, reqiredBlade, sphere, new Object[]{
 	    		"DGD", "ZBZ", "GDG", Character.valueOf('G'), new ItemStack(Items.GOLDEN_APPLE, 1, 1), Character.valueOf('D'), new ItemStack(Items.RECORD_11), Character.valueOf('B'), reqiredBlade, Character.valueOf('Z'), sphere 
 	    }));
 	    

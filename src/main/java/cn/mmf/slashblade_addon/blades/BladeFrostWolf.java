@@ -14,8 +14,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeFrostWolf {
-	public static final String nameA = "flammpfeil.slashblade.named.frostwolfa";
-	public static final String nameB = "flammpfeil.slashblade.named.frostwolfb";
+	public static final String nameA = "slashblade.named.frostwolfa";
+	public static final String nameB = "slashblade.named.frostwolfb";
 	@SubscribeEvent
 	public void InitA(InitEvent event){
 	     ItemStack customblade = new ItemStack(SlashBlade.bladeNamed,1,0);
@@ -52,12 +52,12 @@ public class BladeFrostWolf {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
-		SlashBlade.addRecipe(nameA, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nameA), SlashBlade.getCustomBlade(nameA),SlashBlade.getCustomBlade("flammpfeil.slashblade.named.doutanuki"),new Object[]{
-				" IL", "CS ", "BQ ", Character.valueOf('L'),"dyeBlue", Character.valueOf('S'), sphere, Character.valueOf('B'), SlashBlade.getCustomBlade("flammpfeil.slashblade.named.doutanuki"), Character.valueOf('Q'),"gemQuartz", Character.valueOf('I'), new ItemStack(Blocks.ICE), Character.valueOf('C'), new ItemStack(Blocks.SNOW)
+	    ItemStack sphere = SlashBlade.findItemStack("slashblade", SlashBlade.SphereBladeSoulStr, 1);
+		SlashBlade.addRecipe(nameA, new RecipeAwakeBlade(new ResourceLocation("slashblade",nameA), SlashBlade.getCustomBlade(nameA),SlashBlade.getCustomBlade("slashblade.named.doutanuki"),new Object[]{
+				" IL", "CS ", "BQ ", Character.valueOf('L'),"dyeBlue", Character.valueOf('S'), sphere, Character.valueOf('B'), SlashBlade.getCustomBlade("slashblade.named.doutanuki"), Character.valueOf('Q'),"gemQuartz", Character.valueOf('I'), new ItemStack(Blocks.ICE), Character.valueOf('C'), new ItemStack(Blocks.SNOW)
 				}));
-		SlashBlade.addRecipe(nameB, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nameB), SlashBlade.getCustomBlade(nameB),SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa"),new Object[]{
-				" IL", "CS ", "BQ ", Character.valueOf('L'),"dyeBlue", Character.valueOf('S'), sphere, Character.valueOf('B'), SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa"), Character.valueOf('Q'),"gemQuartz", Character.valueOf('I'), new ItemStack(Blocks.ICE), Character.valueOf('C'), new ItemStack(Blocks.SNOW)
+		SlashBlade.addRecipe(nameB, new RecipeAwakeBlade(new ResourceLocation("slashblade",nameB), SlashBlade.getCustomBlade(nameB),SlashBlade.getCustomBlade("slashblade.named.muramasa"),new Object[]{
+				" IL", "CS ", "BQ ", Character.valueOf('L'),"dyeBlue", Character.valueOf('S'), sphere, Character.valueOf('B'), SlashBlade.getCustomBlade("slashblade.named.muramasa"), Character.valueOf('Q'),"gemQuartz", Character.valueOf('I'), new ItemStack(Blocks.ICE), Character.valueOf('C'), new ItemStack(Blocks.SNOW)
 				}));
 	}
 }

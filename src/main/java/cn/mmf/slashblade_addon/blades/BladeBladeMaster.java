@@ -15,9 +15,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeBladeMaster {
-	public static final String namegreenmist = "flammpfeil.slashblade.named.blademaster.greenmist";
-	public static final String nameaquablaze = "flammpfeil.slashblade.named.blademaster.aquablaze";
-	public static final String namemoonlightcherry = "flammpfeil.slashblade.named.blademaster.moonlightcherry";
+	public static final String namegreenmist = "slashblade.named.blademaster.greenmist";
+	public static final String nameaquablaze = "slashblade.named.blademaster.aquablaze";
+	public static final String namemoonlightcherry = "slashblade.named.blademaster.moonlightcherry";
 
 	@SubscribeEvent
 	public void Initgreenmist(InitEvent event){
@@ -78,9 +78,9 @@ public class BladeBladeMaster {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
+	    ItemStack sphere = SlashBlade.findItemStack("slashblade", SlashBlade.SphereBladeSoulStr, 1);
 	    
-	    ItemStack reqiredBlade_base = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa");
+	    ItemStack reqiredBlade_base = SlashBlade.getCustomBlade("slashblade.named.muramasa");
 	    NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(reqiredBlade_base);
 	    ItemSlashBlade.ProudSoul.set(tag, Integer.valueOf(10000));
 	    ItemSlashBlade.KillCount.set(tag, Integer.valueOf(1000));
@@ -93,13 +93,13 @@ public class BladeBladeMaster {
 	    ItemStack reqblade_3 =reqiredBlade_base.copy();
 	    reqblade_3.addEnchantment(Enchantments.THORNS, 1);
 	    
-		SlashBlade.addRecipe(namegreenmist, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namegreenmist), SlashBlade.getCustomBlade(namegreenmist),reqblade_1, new Object[]{
+		SlashBlade.addRecipe(namegreenmist, new RecipeAwakeBlade(new ResourceLocation("slashblade",namegreenmist), SlashBlade.getCustomBlade(namegreenmist),reqblade_1, new Object[]{
 				 "SRE", "RE ", "BGC", Character.valueOf('B'), reqblade_1, Character.valueOf('E'),"blockEmerald", Character.valueOf('R'),"blockRedstone", Character.valueOf('G'),"blockGold", Character.valueOf('C'), "gemQuartz", Character.valueOf('S'), sphere 
 		}));
-		SlashBlade.addRecipe(nameaquablaze, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nameaquablaze), SlashBlade.getCustomBlade(nameaquablaze),reqblade_2, new Object[]{
+		SlashBlade.addRecipe(nameaquablaze, new RecipeAwakeBlade(new ResourceLocation("slashblade",nameaquablaze), SlashBlade.getCustomBlade(nameaquablaze),reqblade_2, new Object[]{
 				"SRW", "RL ", "BGC", Character.valueOf('B'), reqblade_2, Character.valueOf('W'), new ItemStack(Items.WATER_BUCKET), Character.valueOf('L'), new ItemStack(Items.LAVA_BUCKET), Character.valueOf('R'),"blockRedstone", Character.valueOf('G'),"blockGold", Character.valueOf('C'), "gemQuartz", Character.valueOf('S'), sphere 
 		}));
-		SlashBlade.addRecipe(namemoonlightcherry, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namemoonlightcherry), SlashBlade.getCustomBlade(namemoonlightcherry),reqblade_3, new Object[]{
+		SlashBlade.addRecipe(namemoonlightcherry, new RecipeAwakeBlade(new ResourceLocation("slashblade",namemoonlightcherry), SlashBlade.getCustomBlade(namemoonlightcherry),reqblade_3, new Object[]{
 				 "SRW", "RL ", "BGC", Character.valueOf('B'), reqblade_3, Character.valueOf('W'),"blockQuartz", Character.valueOf('L'),"glowstone", Character.valueOf('R'), "blockRedstone", Character.valueOf('G'),"blockGold", Character.valueOf('C'), "gemQuartz", Character.valueOf('S'), sphere 
 		}));
 	}

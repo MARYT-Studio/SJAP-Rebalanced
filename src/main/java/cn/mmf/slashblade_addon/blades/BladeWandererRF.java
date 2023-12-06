@@ -15,7 +15,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeWandererRF {
-	public static final String name = "flammpfeil.slashblade.named.wanderer.rfblade";
+	public static final String name = "slashblade.named.wanderer.rfblade";
 	@SubscribeEvent
 	public void InitKatanaRF(InitEvent event){
 	     	ItemStack customblade = new ItemStack(ItemLoader.rfblade,1,0);
@@ -34,10 +34,10 @@ public class BladeWandererRF {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
-	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade("flammpfeil.slashblade.named.wanderer"),new Object[]{
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.ProudSoulStr, 1);
+	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade("slashblade.named.wanderer"),new Object[]{
 	    		"  I","QI ","BC ",
-	    		Character.valueOf('B'), SlashBlade.getCustomBlade("flammpfeil.slashblade.named.wanderer"),
+	    		Character.valueOf('B'), SlashBlade.getCustomBlade("slashblade.named.wanderer"),
 	    		Character.valueOf('Q'), "gemQuartz",
 	    		Character.valueOf('I'), "dustRedstone",
 	    		Character.valueOf('C'), ItemLoader.FPNCore
@@ -45,7 +45,7 @@ public class BladeWandererRF {
 		SlashBlade.addRecipe("wanderer_restart", new RecipeRestartUserRF(new ResourceLocation("wanderer_restart"), SlashBlade.getCustomBlade(name),SlashBlade.getCustomBlade(name),new Object[]{
 				"S", "B", "I", 
 			      Character.valueOf('I'), "blockQuartz", 
-			      Character.valueOf('B'), SlashBlade.getCustomBlade("flammpfeil.slashblade",name), 
+			      Character.valueOf('B'), SlashBlade.getCustomBlade("slashblade",name),
 			      Character.valueOf('S'), soul
 				}));
 	}

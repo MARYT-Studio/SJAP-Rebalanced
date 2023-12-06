@@ -271,18 +271,18 @@ public class ItemSlashBladeRF extends ItemSlashBladeNamed implements IMultiModeB
 		tooltip.add(StringUtil.getInstance().localize("info.cofh.charge") + ": " + StringUtil.getInstance().getScaledNumber(getEnergyStored(stack))
 				+ " / " + StringUtil.getInstance().getScaledNumber(getMaxEnergyStored(stack)) + " RF");
 		tooltip.add(StringUtil.ORANGE + getEnergyPerUse(stack) + " "
-				+ StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.energyPerUse") + StringUtil.END);
-		tooltip.add(StringUtil.RED + StringUtil.getInstance().localize("info.flammpfeil.slashblade.tool.user") + ": "
+				+ StringUtil.getInstance().localize("info.slashblade.tool.energyPerUse") + StringUtil.END);
+		tooltip.add(StringUtil.RED + StringUtil.getInstance().localize("info.slashblade.tool.user") + ": "
 				+ Username.get(ItemSlashBlade.getItemTagCompound(stack)));
 		addEmpoweredTip(this, stack, tooltip);
 	}
 
 	public void addEmpoweredTip(IMultiModeBlade item, ItemStack stack, List<String> tooltip) {
 		if (!isEmpowered(stack)) {
-			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOn",
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.slashblade.tool.chargeOn",
 					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		} else {
-			tooltip.add(StringUtil.getInstance().localizeFormat("info.flammpfeil.slashblade.tool.chargeOff",
+			tooltip.add(StringUtil.getInstance().localizeFormat("info.slashblade.tool.chargeOff",
 					StringUtil.getInstance().getKeyName(ClientProxy.ChangeMode.getKeyCode())));
 		}
 	}

@@ -18,7 +18,7 @@ import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.lexicon.page.PageRuneRecipe;
 
 public class BladeTerra {
-	public static final String name = "flammpfeil.slashblade.named.terra";
+	public static final String name = "slashblade.named.terra";
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
 	     ItemStack customblade = new ItemStack(SlashBlade.bladeNamed,1,0);
@@ -41,8 +41,8 @@ public class BladeTerra {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-		ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", "proudsoul", 1);
+		ItemStack sphere = SlashBlade.findItemStack("slashblade", "sphere_bladesoul", 1);
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", "proudsoul", 1);
 	    RecipeRuneAltar runeAltarRecipe;
 	    ItemStack terraBlade = SlashBlade.findItemStack("botania", "terrasword", 1);
 	    ItemStack vineBall = SlashBlade.findItemStack("botania", "vineball", 1);

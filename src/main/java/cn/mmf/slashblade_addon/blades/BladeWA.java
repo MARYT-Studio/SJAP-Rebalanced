@@ -13,8 +13,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeWA {
-	public static final String namekatana = "flammpfeil.slashblade.named.wa.katana";
-	public static final String nametachi = "flammpfeil.slashblade.named.wa.tachi";
+	public static final String namekatana = "slashblade.named.wa.katana";
+	public static final String nametachi = "slashblade.named.wa.tachi";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
@@ -45,19 +45,19 @@ public class BladeWA {
 
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.ProudSoulStr, 1);
 
-	    SlashBlade.addRecipe(namekatana, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namekatana), SlashBlade.getCustomBlade(namekatana), SlashBlade.getCustomBlade("slashbladeWrapper"),new Object[]{
+	    SlashBlade.addRecipe(namekatana, new RecipeAwakeBlade(new ResourceLocation("slashblade",namekatana), SlashBlade.getCustomBlade(namekatana), SlashBlade.getCustomBlade("slashbladeWrapper"),new Object[]{
 				"  S", " W ", "B  ",
 				Character.valueOf('S'), soul,
 				Character.valueOf('B'), ItemLoader.KATANA,
-				Character.valueOf('W'), SlashBlade.findItemStack(SlashBlade.modid,"slashbladeWrapper",1)
+				Character.valueOf('W'), SlashBlade.findItemStack(SlashBlade.MOD_ID,"slashbladeWrapper",1)
 		}));
-	    SlashBlade.addRecipe(nametachi, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nametachi), SlashBlade.getCustomBlade(nametachi), SlashBlade.getCustomBlade("slashbladeWrapper"),new Object[]{
+	    SlashBlade.addRecipe(nametachi, new RecipeAwakeBlade(new ResourceLocation("slashblade",nametachi), SlashBlade.getCustomBlade(nametachi), SlashBlade.getCustomBlade("slashbladeWrapper"),new Object[]{
 				"  S", " W ", "B  ",
 				Character.valueOf('S'), soul,
 				Character.valueOf('B'), ItemLoader.TACHI,
-				Character.valueOf('W'), SlashBlade.findItemStack(SlashBlade.modid,"slashbladeWrapper",1)
+				Character.valueOf('W'), SlashBlade.findItemStack(SlashBlade.MOD_ID,"slashbladeWrapper",1)
 		}));
 	}
 }

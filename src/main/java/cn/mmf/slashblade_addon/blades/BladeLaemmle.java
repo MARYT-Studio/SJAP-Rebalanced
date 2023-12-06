@@ -17,7 +17,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeLaemmle {
-	public static final String name = "flammpfeil.slashblade.named.laemmle";
+	public static final String name = "slashblade.named.laemmle";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
@@ -37,9 +37,9 @@ public class BladeLaemmle {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack required = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.muramasa");
+	    ItemStack required = SlashBlade.getCustomBlade("slashblade.named.muramasa");
 		ItemStack potion = PotionUtils.addPotionToItemStack(new ItemStack(Items.POTIONITEM),PotionTypes.STRONG_STRENGTH);
-		SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name),required, new Object[]{
+		SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name),required, new Object[]{
 				 "XGO", "GBG", "QGX", Character.valueOf('X'), potion, Character.valueOf('G'),"ingotGold", Character.valueOf('O'), "obsidian", Character.valueOf('Q'),"blockQuartz", Character.valueOf('B'), required 
 		}));
 	}

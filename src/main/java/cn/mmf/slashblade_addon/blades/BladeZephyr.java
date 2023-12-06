@@ -22,8 +22,8 @@ import thaumcraft.common.config.ConfigItems;
 import thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
 
 public class BladeZephyr {
-	public static final String name = "flammpfeil.slashblade.named.zephyr";
-	public static final String namewindeater = "flammpfeil.slashblade.named.windeater";
+	public static final String name = "slashblade.named.zephyr";
+	public static final String namewindeater = "slashblade.named.windeater";
 	@SubscribeEvent
 	public void InitZephyr(InitEvent event){
 	     ItemStack customblade = new ItemStack(ItemLoader.tcblade,1,0);
@@ -60,8 +60,8 @@ public class BladeZephyr {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-		 ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
-		 ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.SphereBladeSoulStr, 1);
+		 ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.ProudSoulStr, 1);
+		 ItemStack sphere = SlashBlade.findItemStack("slashblade", SlashBlade.SphereBladeSoulStr, 1);
 		 ItemStack isESW = new ItemStack(ItemsTC.elementalSword,1,32767);
 		 EnumInfusionEnchantment.addInfusionEnchantment(isESW, EnumInfusionEnchantment.ARCING, 2);
 		 ThaumcraftApi.addInfusionCraftingRecipe(new ResourceLocation(SJAP.MOD_ID,namewindeater),
@@ -74,7 +74,7 @@ public class BladeZephyr {
 		ItemStack ReqBlade = SlashBlade.getCustomBlade(namewindeater);
 	    NBTTagCompound tag = ItemSlashBlade.getItemTagCompound(ReqBlade);
 	    ItemSlashBlade.KillCount.set(tag, Integer.valueOf(100));
-	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name), ReqBlade, new Object[]{
+	    SlashBlade.addRecipe(name, new RecipeAwakeBlade(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name), ReqBlade, new Object[]{
 	    		" X ", "XBX", " X ", Character.valueOf('X'), soul, Character.valueOf('B'), ReqBlade
 	    }));
 	}

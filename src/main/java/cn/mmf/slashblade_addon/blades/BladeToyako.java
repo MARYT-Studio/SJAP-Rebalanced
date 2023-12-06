@@ -25,7 +25,7 @@ import static net.minecraft.entity.passive.EntityVillager.ListEnchantedItemForEm
 import static net.minecraft.entity.passive.EntityVillager.ListItemForEmeralds;
 
 public class BladeToyako {
-	public static final String name = "flammpfeil.slashblade.named.toyako";
+	public static final String name = "slashblade.named.toyako";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){

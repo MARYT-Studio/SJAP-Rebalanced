@@ -4,7 +4,7 @@
          "key" : "WINDEATER",
          "name" : "research.WINDEATER.title",
          "icons" : [
-            "flammpfeil.slashblade:slashbladenamed;1;0;{ModelName:\"zephyr/model\",TextureName: \"zephyr/tex\"}"
+            "slashblade:slashbladenamed;1;0;{ModelName:\"zephyr/model\",TextureName: \"zephyr/tex\"}"
          ],
          "category" : "INFUSION",
          "location" : [ -3, 4 ],
@@ -17,8 +17,8 @@
             {
                "text" : "research.WINDEATER.text.stage.2",
                "recipes" : [
-                  "slashblade_addon:flammpfeil.slashblade.named.windeater",
-                  "flammpfeil.slashblade:flammpfeil.slashblade.named.zephyr"
+                  "slashblade_addon:slashblade.named.windeater",
+                  "slashblade:slashblade.named.zephyr"
                ]
             }
          ]

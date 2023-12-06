@@ -35,8 +35,8 @@ public class BladeCS2Template {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1);
-		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.IngotBladeSoulStr, 1);
+		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
 				 "DCS", "CS ", "GP ", Character.valueOf('P'),"string", Character.valueOf('G'), "stickWood", Character.valueOf('S'), soul ,
 				 'D',"dyeBlue",'C',"blockCoal"
 		}));

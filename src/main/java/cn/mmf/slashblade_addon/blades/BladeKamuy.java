@@ -16,10 +16,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeKamuy {
-	public static final String namebase = "flammpfeil.slashblade.named.kamuy.base";
-	public static final String namewater = "flammpfeil.slashblade.named.kamuy.water";
-	public static final String namefire = "flammpfeil.slashblade.named.kamuy.fire";
-	public static final String namelightning = "flammpfeil.slashblade.named.kamuy.lightning";
+	public static final String namebase = "slashblade.named.kamuy.base";
+	public static final String namewater = "slashblade.named.kamuy.water";
+	public static final String namefire = "slashblade.named.kamuy.fire";
+	public static final String namelightning = "slashblade.named.kamuy.lightning";
 
 	@SubscribeEvent
 	public void InitBase(InitEvent event){
@@ -106,7 +106,7 @@ public class BladeKamuy {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-        ItemStack sphere = SlashBlade.findItemStack(SlashBlade.modid, SlashBlade.SphereBladeSoulStr, 1);
+        ItemStack sphere = SlashBlade.findItemStack(SlashBlade.MOD_ID, SlashBlade.SphereBladeSoulStr, 1);
 
         ItemStack blade_base = SlashBlade.getCustomBlade(namebase);
         ItemStack blade_water = SlashBlade.getCustomBlade(namewater);
@@ -119,7 +119,7 @@ public class BladeKamuy {
 		ItemSlashBlade.KillCount.set(reqtag_base, 1000);
 		ItemSlashBlade.ProudSoul.set(reqtag_base, 1000);
 		reqblade_base.addEnchantment(Enchantments.LOOTING, 1);
-		SlashBlade.addRecipe(namebase, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namebase), blade_base, reqblade_base, new Object[]{
+		SlashBlade.addRecipe(namebase, new RecipeAwakeBlade(new ResourceLocation("slashblade",namebase), blade_base, reqblade_base, new Object[]{
 				"SQS","IKI","SBS",'S', sphere,'K', reqblade_base,'Q', "gemQuartz",'I', "blockIron",'B', Items.BOOK
 		}));
 		ItemStack reqblade = SlashBlade.getCustomBlade(namebase);
@@ -127,15 +127,15 @@ public class BladeKamuy {
 		ItemSlashBlade.RepairCount.set(reqtag, 20);
 		ItemSlashBlade.KillCount.set(reqtag, 2000);
 		ItemSlashBlade.ProudSoul.set(reqtag, 5000);
-		SlashBlade.addRecipe(namewater, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namewater), blade_water, reqblade, new Object[]{
+		SlashBlade.addRecipe(namewater, new RecipeAwakeBlade(new ResourceLocation("slashblade",namewater), blade_water, reqblade, new Object[]{
 				"S8S","4K6","S2S",
 				'S', sphere,'K', reqblade,'8',"blockLapis",'4', Blocks.ICE,'6', Blocks.SNOW,'2', Items.WATER_BUCKET
 		}));
-		SlashBlade.addRecipe(namefire, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namefire), blade_fire, reqblade, new Object[]{
+		SlashBlade.addRecipe(namefire, new RecipeAwakeBlade(new ResourceLocation("slashblade",namefire), blade_fire, reqblade, new Object[]{
 				"S8S","4K6","S2S",
 				'S', sphere,'K', reqblade,'8',"blockRedstone",'4',Items.FIRE_CHARGE,'6', Items.BLAZE_ROD,'2', Items.LAVA_BUCKET
 		}));
-		SlashBlade.addRecipe(namelightning, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namelightning), blade_lightning, reqblade, new Object[]{
+		SlashBlade.addRecipe(namelightning, new RecipeAwakeBlade(new ResourceLocation("slashblade",namelightning), blade_lightning, reqblade, new Object[]{
 				"S8S","4K6","S2S",
 				'S', sphere,'K', reqblade,'8',"blockIron",'4', "blockGold",'6', "blockDiamond",'2', "blockEmerald"
 		}));

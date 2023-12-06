@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class BladeWanderer {
-	public static final String name = "flammpfeil.slashblade.named.wanderer";
+	public static final String name = "slashblade.named.wanderer";
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
 	     ItemStack customblade = new ItemStack(SlashBlade.bladeNamed,1,0);
@@ -34,9 +34,9 @@ public class BladeWanderer {
 
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.IngotBladeSoulStr, 1);
-		ItemStack reqiredBlade = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.doutanuki");
-		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
+	    ItemStack ingot = SlashBlade.findItemStack("slashblade", SlashBlade.IngotBladeSoulStr, 1);
+		ItemStack reqiredBlade = SlashBlade.getCustomBlade("slashblade.named.doutanuki");
+		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
 				 "  I", "QI ", "BC ", Character.valueOf('B'), reqiredBlade , Character.valueOf('Q'),"gemQuartz", Character.valueOf('I'), ingot, Character.valueOf('C'), new ItemStack(Items.CLOCK) 
 		}));
 	}

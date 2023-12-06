@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class BladeFluorescentBar {
-	public static final String name = "flammpfeil.slashblade.named.fluorescentbar";
+	public static final String name = "slashblade.named.fluorescentbar";
 
 	@SubscribeEvent
 	public void InitKatana(InitEvent event){
@@ -33,8 +33,8 @@ public class BladeFluorescentBar {
 	}
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", SlashBlade.ProudSoulStr, 1);
-		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("flammpfeil.slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", SlashBlade.ProudSoulStr, 1);
+		SlashBlade.addRecipe(name, new ShapedOreRecipe(new ResourceLocation("slashblade",name), SlashBlade.getCustomBlade(name), new Object[]{
 				 " PS", "PGP", "SP ", Character.valueOf('P'),"paper", Character.valueOf('G'), "blockGlass", Character.valueOf('S'), soul 
 		}));
 	}

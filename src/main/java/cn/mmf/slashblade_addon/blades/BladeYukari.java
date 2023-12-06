@@ -14,8 +14,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeYukari {
-	public static final String nameyukari = "flammpfeil.slashblade.named.yukari";
-	public static final String nametboen = "flammpfeil.slashblade.named.tboen";
+	public static final String nameyukari = "slashblade.named.yukari";
+	public static final String nametboen = "slashblade.named.tboen";
 	@SubscribeEvent
 	public void InitYukari(InitEvent event){
 	     ItemStack customblade = new ItemStack(SlashBlade.bladeNamed,1,0);
@@ -55,14 +55,14 @@ public class BladeYukari {
 	
 	@SubscribeEvent
 	public void InitRecipes(PostInitEvent event){
-	    ItemStack sphere = SlashBlade.findItemStack("flammpfeil.slashblade", "sphere_bladesoul", 1);
-	    ItemStack ingot = SlashBlade.findItemStack("flammpfeil.slashblade", "ingot_bladesoul", 1);
-	    ItemStack soul = SlashBlade.findItemStack("flammpfeil.slashblade", "proudsoul", 1);
+	    ItemStack sphere = SlashBlade.findItemStack("slashblade", "sphere_bladesoul", 1);
+	    ItemStack ingot = SlashBlade.findItemStack("slashblade", "ingot_bladesoul", 1);
+	    ItemStack soul = SlashBlade.findItemStack("slashblade", "proudsoul", 1);
 	    
 	    ItemStack yukari = SlashBlade.getCustomBlade(nameyukari);
 	    ItemStack tboen = SlashBlade.getCustomBlade(nametboen);
 	    
-	    ItemStack reqblade_yukari = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.yuzukitukumo");
+	    ItemStack reqblade_yukari = SlashBlade.getCustomBlade("slashblade.named.yuzukitukumo");
 	    ItemStack reqblade_tboen = new ItemStack(SlashBlade.bladeWhiteSheath);
 	    
 	    NBTTagCompound reqtag_yukati = ItemSlashBlade.getItemTagCompound(reqblade_yukari);
@@ -70,10 +70,10 @@ public class BladeYukari {
 	    reqblade_yukari.addEnchantment(Enchantments.FIRE_ASPECT, 1);
 	    ItemSlashBlade.KillCount.set(reqtag_yukati, 1000);
 	    
-	    SlashBlade.addRecipe(nameyukari, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nameyukari), yukari, reqblade_yukari, new Object[]{
+	    SlashBlade.addRecipe(nameyukari, new RecipeAwakeBlade(new ResourceLocation("slashblade",nameyukari), yukari, reqblade_yukari, new Object[]{
 	    		"ISI", "SBS", "ISI", Character.valueOf('I'), ingot, Character.valueOf('S'), sphere, Character.valueOf('B'), reqblade_yukari 
 	    }));
-	    SlashBlade.addRecipe(nametboen, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",nametboen), tboen, reqblade_tboen, new Object[]{
+	    SlashBlade.addRecipe(nametboen, new RecipeAwakeBlade(new ResourceLocation("slashblade",nametboen), tboen, reqblade_tboen, new Object[]{
 	    		"SSS", "SBS", "SSS", Character.valueOf('S'), soul, Character.valueOf('B'), reqblade_tboen  
 	    }));
 	}

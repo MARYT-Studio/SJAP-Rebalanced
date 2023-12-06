@@ -16,8 +16,8 @@ import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BladeDarkRaven {
-	public static final String namedr = "flammpfeil.slashblade.named.darkraven";
-	public static final String namesc = "flammpfeil.slashblade.named.snowcrow";
+	public static final String namedr = "slashblade.named.darkraven";
+	public static final String namesc = "slashblade.named.snowcrow";
 	@SubscribeEvent
 	public void InitDR(InitEvent event){
 	     ItemStack customblade = new ItemStack(SlashBlade.bladeNamed,1,0);
@@ -54,7 +54,7 @@ public class BladeDarkRaven {
 		ItemStack darkraven = SlashBlade.getCustomBlade(namedr);
 		ItemStack snowcrow = SlashBlade.getCustomBlade(namesc);
 		
-		ItemStack doutanuki = SlashBlade.getCustomBlade("flammpfeil.slashblade.named.doutanuki");
+		ItemStack doutanuki = SlashBlade.getCustomBlade("slashblade.named.doutanuki");
 		
 	    float fact = 0.05F;
 	    try
@@ -69,7 +69,7 @@ public class BladeDarkRaven {
 	      SlashBlade.mainConfiguration.save();
 	    }
 	    DropEventHandler.registerEntityDrop(new ResourceLocation("twilightforest", "raven"), fact, darkraven);
-	    SlashBlade.addRecipe(namesc, new RecipeAwakeBlade(new ResourceLocation("flammpfeil.slashblade",namesc), snowcrow, doutanuki, new Object[] { " FQ", "SQ ", "B  ", Character.valueOf('Q'),"blockQuartz", Character.valueOf('F'), new ItemStack(Items.FEATHER), Character.valueOf('S'), new ItemStack(Items.SNOWBALL), Character.valueOf('B'), doutanuki 
+	    SlashBlade.addRecipe(namesc, new RecipeAwakeBlade(new ResourceLocation("slashblade",namesc), snowcrow, doutanuki, new Object[] { " FQ", "SQ ", "B  ", Character.valueOf('Q'),"blockQuartz", Character.valueOf('F'), new ItemStack(Items.FEATHER), Character.valueOf('S'), new ItemStack(Items.SNOWBALL), Character.valueOf('B'), doutanuki 
 	    		}));
 	}
 	
